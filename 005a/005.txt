@@ -1,0 +1,24 @@
+-- List alle metaller som er i 4. periode
+SELECT * FROM table_elements
+WHERE Metal = 'metal' AND Period = 4;
+
+-- List alle gasser som er ikke i 8. gruppe
+SELECT * FROM table_elements
+WHERE Phase = 'gas' AND [Group] <> 8;
+
+-- List alle grundstoffer som har elektronegativitet mindre end 2
+SELECT * FROM table_elements
+WHERE Electronegativity < 2;
+
+-- List alle grundstoffer som er sorteret efter smeltepunkt
+SELECT * FROM table_elements
+ORDER BY MeltingPoint;
+
+-- Lav Heliums kogepunkt om til 100 K
+UPDATE table_elements
+SET BoilingPoint = 100
+WHERE Element = 'Helium';
+
+-- Indset ”Ny grundstof” med alle værdier
+INSERT INTO table_elements (AtomicNumber,Element,Symbol,AtomicMass,NumberofNeutrons,NumberofProtons,NumberofElectrons,Period,Grouup,Phase,Radioactive,Natuural,Metal,Nonmetal,Metalloid,Type,AtomicRadius,Electronegativity,FirstIonization,Density,MeltingPoint,BoilingPoint,NumberOfIsotopes,Discoverer,Year,SpecificHeat,NumberofShells,NumberofValence)
+VALUES (42069,'Mango Loco','Ml',40,3,2,1,100,2,"no","meh","yes","no",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
